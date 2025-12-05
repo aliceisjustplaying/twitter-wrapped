@@ -8,3 +8,7 @@ Your archive.html
 
 # Playwright test screenshots
 .playwright-mcp/
+
+# Build output
+dist/
+node_modules/
