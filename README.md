@@ -1,15 +1,31 @@
-# twitter-2025-11-23-a5d67dd21d224cc3d2161646f6bda7e9c148c1d4acd768082191896dab28322e
+# Twitter Wrapped 2025
 
-To install dependencies:
+A Spotify Wrapped-style visualization of your Twitter/X archive data.
+
+## Setup
+
+1. Export your Twitter archive from Twitter/X settings
+2. Place the `data/` folder from your archive in this directory
+3. Install dependencies and run:
 
 ```bash
 bun install
+bun run dev
 ```
 
-To run:
+4. Open http://localhost:5173
 
-```bash
-bun run 
-```
+## How it works
 
-This project was created using `bun init` in bun v1.3.3. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+- `analyze.js` - Parses your Twitter archive and extracts 2025 stats
+- `index.html` - Single-page visualization with animations and charts
+
+## Features
+
+- Total tweets, likes, and engagement stats
+- Monthly/weekly/hourly activity charts
+- Top mentions ("ride-or-dies")
+- Word cloud and emoji usage
+- Viral tweet highlight
+- Posting streak tracking
+- Mobile-optimized slide layout
