@@ -2,7 +2,7 @@
   "name": "twitter-wrapped",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "npx @react-grab/claude-code@latest && vite",
     "build": "vite build",
     "preview": "vite preview"
   },

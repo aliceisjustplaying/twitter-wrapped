@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="module">
+      if (import.meta.env.DEV) {
+        import("react-grab");
+        import("@react-grab/claude-code/client");
+      }
+    </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>alice's 2025 Twitter Wrapped</title>
@@ -141,8 +147,8 @@
       background: var(--bg-card);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 100px;
-      padding: 8px 20px;
-      font-size: 14px;
+      padding: 10px 24px;
+      font-size: 18px;
       color: var(--text-dim);
       margin-bottom: 32px;
       animation: fadeInDown 1s ease-out;
@@ -210,8 +216,8 @@
     }
 
     .hero-bio {
-      font-size: 18px;
-      color: var(--text-dim);
+      font-size: 22px;
+      color: rgba(255,255,255,0.85);
       font-style: italic;
       animation: fadeInUp 1s ease-out 0.6s backwards;
     }
@@ -556,6 +562,8 @@
     .top-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, auto);
+      grid-auto-flow: column;
       gap: 12px;
     }
 
@@ -899,7 +907,7 @@
       }
 
       .hero-bio {
-        font-size: 16px;
+        font-size: 18px;
       }
 
       .breakdown-section h2 {
@@ -1004,35 +1012,35 @@
 
       .top-list {
         grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
+        gap: 4px;
       }
 
       .top-item {
-        padding: 8px 10px;
-        gap: 8px;
+        padding: 6px 8px;
+        gap: 6px;
       }
 
       .top-rank {
-        width: 26px;
-        height: 26px;
-        font-size: 12px;
-        border-radius: 8px;
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+        border-radius: 6px;
       }
 
       .top-name {
-        font-size: 12px;
+        font-size: 11px;
       }
 
       .top-handle {
-        font-size: 10px;
+        font-size: 9px;
       }
 
       .top-count {
-        font-size: 14px;
+        font-size: 13px;
       }
 
       .top-count-label {
-        font-size: 8px;
+        font-size: 7px;
       }
 
       .bar-chart {
@@ -1325,7 +1333,7 @@
   <section class="chart-section">
     <div class="container reveal">
       <h2>Your ride-or-dies</h2>
-      <p style="color: var(--text-dim); margin-bottom: 32px;">People you @mentioned the most in tweets and replies</p>
+      <p style="color: var(--text-dim); margin-bottom: 16px;">People you @mentioned the most in tweets and replies</p>
       <div class="top-list" id="topMentions"></div>
     </div>
   </section>
@@ -1455,14 +1463,14 @@
 
     // Expanded word list
     const topWords = [
-      ['yeah', 922], ['one', 779], ['good', 673], ['people', 518], ['don', 488],
-      ['time', 437], ['well', 428], ['even', 378], ['much', 343], ['way', 339],
-      ['thing', 325], ['lot', 316], ['still', 314], ['want', 309], ['many', 293],
-      ['see', 280], ['back', 272], ['things', 270], ['bad', 269], ['day', 260],
-      ['other', 254], ['tpot', 252], ['same', 250], ['new', 247], ['love', 242],
-      ['right', 239], ['maybe', 233], ['first', 227], ['something', 227], ['most', 222],
-      ['feel', 219], ['actually', 217], ['kind', 215], ['pretty', 210], ['work', 205],
-      ['need', 198], ['better', 195], ['make', 190], ['world', 185], ['point', 180]
+      ['yeah', 922], ['one', 779], ['good', 673], ['people', 518], ['time', 437],
+      ['well', 428], ['even', 378], ['much', 343], ['way', 339], ['thing', 325],
+      ['lot', 316], ['still', 314], ['want', 309], ['many', 293], ['see', 280],
+      ['back', 272], ['things', 270], ['bad', 269], ['day', 260], ['other', 254],
+      ['tpot', 252], ['same', 250], ['new', 247], ['love', 242], ['right', 239],
+      ['maybe', 233], ['first', 227], ['something', 227], ['most', 222], ['feel', 219],
+      ['actually', 217], ['kind', 215], ['pretty', 210], ['work', 205], ['need', 198],
+      ['better', 195], ['make', 190], ['world', 185], ['point', 180], ['post', 175]
     ];
 
     // Expanded emoji list
