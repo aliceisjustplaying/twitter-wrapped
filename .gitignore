@@ -1,0 +1,7 @@
+# Twitter archive data (personal/sensitive)
+data/
+assets/
+data.json
+
+# Archive metadata
+Your archive.html
